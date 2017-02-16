@@ -33,6 +33,7 @@ class GradesController < ApplicationController
   # POST /grades.json
   def create
     @grade = Grade.new(grade_params)
+    @grade.user = current_user
 
     respond_to do |format|
       if @grade.save
@@ -77,6 +78,7 @@ class GradesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def grade_params
-      params.require(:grade).permit(:letter_grade, :comment, :course, :user_id)
+      #params.require(:grade).permit(:letter_grade, :comment, :course, :user_id)
+      params.require(:grade).permit(:letter_grade, :comment, :course)
     end
 end
