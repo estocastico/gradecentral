@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  letter_grade: MyString
+  comment: MyString
+  course: MyString
+  user_id: 
+
+two:
+  letter_grade: MyString
+  comment: MyString
+  course: MyString
+  user_id: 
